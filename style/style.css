@@ -1,0 +1,252 @@
+html {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before,
+body,
+form,
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+* {
+  padding: 10px;
+  margin: 10px;
+}
+
+:root {
+  --height-elementos-internos: 1.5rem;
+  /* ******************************* */
+  --height-ementos-internos-768: 3rem;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  background-color: aqua;
+}
+
+/** ============================================================         Mobile
+==============================================================
+
+/** Menu - Header
+==================================
+*/
+
+.box-menu-header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: black;
+}
+
+.menuBox {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+
+  background-color: #3881e0;
+}
+
+.menuBox__logo,
+.menuBox__menu,
+.menuBox__socialMedia {
+  height: var(--height-elementos-internos);
+  padding: 0 0.8rem;
+  background-color: #ffffff;
+}
+
+.menuBox__logo {
+  flex: 1 1 auto;
+}
+
+.menuBox__menu {
+  flex: 5 1 auto;
+}
+
+.menuBox__socialMedia {
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: #276678;
+}
+
+.header__item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  height: var(--height-elementos-internos);
+  background-color: #ffe227;
+}
+
+/** Section
+==================================
+*/
+.section {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 208, 0);
+}
+
+.section__articleBox {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: #6930c3;
+}
+
+.articleBox__item1,
+.articleBox__item2,
+.articleBox__item3,
+.articleBox__item4 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 40%;
+  height: var(--height-elementos-internos);
+  background-color: #33d6cb;
+}
+
+.articleBox__item5 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  height: var(--height-elementos-internos);
+  background-color: rgb(255, 255, 255);
+}
+
+.section__aside {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: #75cfb8;
+}
+
+.aside__item {
+  background-color: rgb(255, 0, 0);
+}
+
+/** Footer
+==================================
+*/
+.footer {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(85, 85, 85);
+}
+
+.footer__info {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgb(135, 168, 228);
+}
+
+/** ============================================================          Media Querie 768px
+===============================================================
+*/
+@media screen and (min-width: 768px) {
+  /** Menu - Header
+  ==================================
+  */
+
+  .menuBox,
+  .header {
+    height: 100%;
+  }
+
+  .menuBox__logo,
+  .menuBox__menu,
+  .menuBox__socialMedia,
+  .header__item {
+    height: var(--height-ementos-internos-768);
+  }
+
+  /** section
+  ==================================
+  */
+
+  .section__articleBox,
+  .section__aside {
+    height: 100%;
+  }
+
+  .articleBox__item1,
+  .articleBox__item2,
+  .articleBox__item3,
+  .articleBox__item4,
+  .articleBox__item5,
+  .aside__item {
+    height: var(--height-ementos-internos-768);
+  }
+
+  /** section
+  ==================================
+  */
+  .footer {
+    height: 100%;
+  }
+
+  .footer__info {
+    height: var(--height-ementos-internos-768);
+  }
+}
+
+/** ============================================================          Media Querie 1024px
+===============================================================
+*/
+
+@media screen and (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+  }
+
+  .section__aside {
+    height: auto;
+  }
+}
