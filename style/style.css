@@ -47,18 +47,18 @@ li {
 /** ============================================================         Mobile
 ==============================================================
 
-/** Menu - Header
+/** nav - Header
 ==================================
 */
 
-.box-menu-header {
+.box-nav-header {
   display: flex;
   flex-direction: column;
   height: 100%;
   background-color: black;
 }
 
-.menuBox {
+.navBox {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
@@ -70,23 +70,23 @@ li {
   background-color: #3881e0;
 }
 
-.menuBox__logo,
-.menuBox__menu,
-.menuBox__socialMedia {
+.navBox__logo,
+.navBox__nav,
+.navBox__socialMedia {
   height: var(--height-elementos-internos);
   padding: 0 0.8rem;
   background-color: #ffffff;
 }
 
-.menuBox__logo {
+.navBox__logo {
   flex: 1 1 auto;
 }
 
-.menuBox__menu {
+.navBox__nav {
   flex: 5 1 auto;
 }
 
-.menuBox__socialMedia {
+.navBox__socialMedia {
   flex: 1 1 auto;
 }
 
@@ -191,18 +191,18 @@ li {
 ===============================================================
 */
 @media screen and (min-width: 768px) {
-  /** Menu - Header
+  /** nav - Header
   ==================================
   */
 
-  .menuBox,
+  .navBox,
   .header {
     height: 100%;
   }
 
-  .menuBox__logo,
-  .menuBox__menu,
-  .menuBox__socialMedia,
+  .navBox__logo,
+  .navBox__nav,
+  .navBox__socialMedia,
   .header__item {
     height: var(--height-ementos-internos-768);
   }
